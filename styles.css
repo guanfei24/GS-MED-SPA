@@ -46,7 +46,7 @@ body {
 
 /* Navbar */
 .navbar {
-  background: rgba(255, 255, 255, 0.95);
+  background: #f1f5f2;
   padding: 16px 0; /* 稍微减小内边距，让大 Logo 更紧凑 */
   position: sticky;
   top: 0;
@@ -165,12 +165,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  /* 85% 透明度的白色遮罩，根据图片深浅可调整 0.85 这个数值 */
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.95) 30%, 
-    rgba(255, 255, 255, 0.7) 100%
-  );
+  
 }
 
 /* 文字内容区域 */
@@ -676,4 +671,362 @@ body {
   .footer-phone {
     justify-content: center;
   }
+}
+
+/* =========================
+   HERO Step 1: text on right, image on left
+   (Only affects .hero.hero-step1-right)
+   ========================= */
+
+.hero.hero-step1-right {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 新增一个两列布局容器 */
+.hero.hero-step1-right .hero-inner {
+  height: 80vh;
+  min-height: 550px;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr; /* 左图右文 */
+}
+
+/* 左侧图片：变成“占位列”，不再 absolute 盖全屏 */
+.hero.hero-step1-right .hero-image {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 右侧内容：居中对齐 */
+.hero.hero-step1-right .hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+/* 让文字块自然落在右侧中间 */
+.hero.hero-step1-right .hero-text-box {
+  margin-left: auto;
+  max-width: 620px;
+}
+
+/* 手机端：上下堆叠 */
+@media (max-width: 900px) {
+  .hero.hero-step1-right .hero-inner {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: auto;
+  }
+
+  .hero.hero-step1-right .hero-image {
+    height: 44vh;
+    min-height: 320px;
+  }
+
+  .hero.hero-step1-right .hero-content {
+    padding: 40px 0 60px;
+  }
+
+  .hero.hero-step1-right .hero-text-box {
+    margin-left: 0;
+  }
+}
+
+/* =========================
+   Services Page (only)
+   ========================= */
+body.services-page .page-hero {
+  padding: 72px 0 54px;
+  background: #f7f8f6; /* 你要区分 header/hero 的风格，这里非常合适 */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+body.services-page .page-hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 3.2vw, 3rem);
+  margin: 0 0 10px;
+}
+
+body.services-page .page-hero p {
+  margin: 0 0 18px;
+  color: var(--text-light);
+  max-width: 70ch;
+}
+
+body.services-page .page-hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+body.services-page .pricing-block {
+  padding: 34px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+body.services-page .pricing-head h2 {
+  font-family: var(--serif);
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+}
+
+body.services-page .muted {
+  margin: 0;
+  color: var(--text-light);
+}
+
+body.services-page .price-cards {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+body.services-page .price-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  padding: 18px 18px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+body.services-page .price-card .time {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+body.services-page .price-card .price {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+body.services-page .service-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+body.services-page .service-price {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+body.services-page .service-price h3 {
+  margin: 0 0 12px;
+  font-size: 1.15rem;
+}
+
+body.services-page .service-price .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+body.services-page .addon-list {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+body.services-page .addon-item {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  padding: 16px 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+body.services-page .package-box {
+  margin-top: 16px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+body.services-page .package-actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+body.services-page .fineprint {
+  margin-top: 14px;
+  color: var(--text-light);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 900px) {
+  body.services-page .price-cards,
+  body.services-page .service-grid {
+    grid-template-columns: 1fr;
+  }
+  body.services-page .addon-list {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================
+   Facial Showcase
+   Background image on RIGHT side of container
+   ========================= */
+
+.facial-showcase-bg {
+  padding: 64px 0;
+  background: #f7f8f6;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+/* 👉 关键：container 本身带背景 */
+.facial-showcase-inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: stretch;
+
+  /* 右侧背景图 */
+  background-image:
+  linear-gradient(
+    to right,
+    #f7f8f6 0%,
+    #f7f8f6 44%,
+    rgba(247, 248, 246, 0.75) 52%,
+    rgba(247, 248, 246, 0.35) 60%,
+    rgba(247, 248, 246, 0) 68%
+  ),
+  url("assets/images/facial-bg-right.jpg");
+
+
+  background-size: cover;
+  background-position: right center;
+  border-radius: 18px;
+  padding: 42px;
+  box-shadow: 0 18px 44px rgba(44, 51, 46, 0.12);
+}
+
+/* 左侧内容区 */
+.facial-left {
+  max-width: 720px;
+}
+
+/* 文案样式 */
+.facial-kicker {
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.facial-showcase-bg h2 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 2.8vw, 2.6rem);
+  line-height: 1.05;
+  margin: 0 0 10px;
+}
+
+.facial-intro {
+  margin: 0 0 18px;
+  color: var(--text-light);
+  max-width: 70ch;
+}
+
+/* 项目 */
+.facial-deals {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.deal {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(226, 232, 228, 0.98);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 12px 28px rgba(44, 51, 46, 0.1);
+}
+
+.deal h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.deal p {
+  margin: 0 0 12px;
+  color: var(--text-light);
+}
+
+.deal-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 10px;
+}
+
+.deal-meta .from strong {
+  font-size: 1.25rem;
+}
+
+.deal-meta .duration {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(74, 124, 89, 0.1);
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+/* CTA */
+.facial-actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.facial-note {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+/* Mobile */
+@media (max-width: 980px) {
+  .facial-showcase-inner {
+    grid-template-columns: 1fr;
+    background-image: url("assets/images/facial-bg-right.jpg");
+    background-position: center;
+    padding: 28px;
+  }
+
+  .facial-deals {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.services-cta {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
 }
