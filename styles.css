@@ -622,7 +622,10 @@ body {
 }
 
 @media (max-width: 768px) {
-  
+
+  .nav-btn {
+    display: none; /* 在移动端也可以考虑隐藏这个按钮，或者放入汉堡菜单中 */
+  }
   .logo img {
     height: clamp(60px, 15vw, 90px); /* 手机上进一步缩小 */
     max-height: 100px;
