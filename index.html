@@ -1,25 +1,29 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Natural Care Spa | 专业理疗按摩</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>GS MED SPA | Massage & Spa in Naples, FL</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="navbar">
       <nav class="container nav-content">
-        <a href="#" class="logo">Natural Care <span>Spa</span></a>
+        <a href="#" class="logo">
+          <img src="assets/images/logo.png" alt="GS MED SPA Logo" />
+        </a>
+
         <ul class="nav-links">
-          <li><a href="#services">服务项目</a></li>
-          <li><a href="#about">关于我们</a></li>
-          <li><a href="#contact">联系预约</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-        <a href="tel:+14347707235" class="nav-btn">立即通话</a>
+
+        <a href="tel:+14347707235" class="nav-btn">Call Now</a>
       </nav>
     </header>
 
@@ -28,23 +32,22 @@
         <div
           class="hero-image"
           data-parallax
-          style="
-            background-image: url('https://image.pollinations.ai/prompt/bright%20modern%20spa%20interior%20white%20towels%20bamboo%20natural%20lighting%20serene%2016:9');
-          "
+          style="background-image: url('assets/images/background.png')"
         ></div>
+
         <div class="hero-content container">
           <div class="hero-text-box" data-animate>
-            <h1>专业理疗按摩服务</h1>
+            <h1>Professional Massage & Spa</h1>
             <p>
-              在宁静的环境中，通过专业的按摩手法舒缓压力，找回身心的平衡。我们专注于深层组织理疗与全身放松。
+              Relax, reset, and recharge in a calm, private setting. Our
+              therapists tailor each session to help relieve tension, reduce
+              stress, and support recovery.
             </p>
             <div class="hero-actions">
               <a href="tel:+14347707235" class="btn btn-primary"
-                >拨打电话预约</a
+                >Call to Book</a
               >
-              <a href="sms:+14347707235" class="btn btn-outline"
-                >发送短信咨询</a
-              >
+              <a href="sms:+14347707235" class="btn btn-outline">Text Us</a>
             </div>
           </div>
         </div>
@@ -52,19 +55,32 @@
 
       <section id="services" class="section services">
         <div class="container">
-          <h2 class="section-title" data-animate>我们的服务</h2>
+          <h2 class="section-title" data-animate>Our Services</h2>
           <div class="services-grid">
             <div class="service-card" data-animate>
               <div
                 class="service-img"
-                style="
-                  background-image: url('https://image.pollinations.ai/prompt/professional%20deep%20tissue%20massage%20close%20up%20bright%20clean');
-                "
+                style="background-image: url('assets/images/services/dt.png')"
               ></div>
               <div class="service-info">
-                <h3>深层组织按摩</h3>
+                <h3>Deep Tissue</h3>
                 <p>
-                  针对长期肌肉紧张和结节，通过精准的力量触达深层肌群，缓解慢性疼痛。
+                  Focused pressure to release tight muscles and knots,
+                  supporting mobility and long-lasting relief.
+                </p>
+              </div>
+            </div>
+
+            <div class="service-card" data-animate>
+              <div
+                class="service-img"
+                style="background-image: url('assets/images/services/sm.png')"
+              ></div>
+              <div class="service-info">
+                <h3>Swedish Massage</h3>
+                <p>
+                  A gentle, flowing massage to promote circulation and calm the
+                  nervous system—ideal for first-time guests.
                 </p>
               </div>
             </div>
@@ -73,28 +89,55 @@
               <div
                 class="service-img"
                 style="
-                  background-image: url('https://image.pollinations.ai/prompt/swedish%20massage%20with%20oils%20bright%20spa%20setting');
+                  background-image: url('assets/images/services/thai-massage.jpg');
                 "
               ></div>
               <div class="service-info">
-                <h3>瑞典式放松按摩</h3>
+                <h3>Thai Stretching</h3>
                 <p>
-                  经典的轻柔手法，促进血液循环，减轻压力，非常适合初次尝试按摩的客人。
+                  Assisted stretching and rhythmic compression to enhance
+                  flexibility and energize the body.
                 </p>
               </div>
             </div>
-
             <div class="service-card" data-animate>
               <div
                 class="service-img"
                 style="
-                  background-image: url('https://image.pollinations.ai/prompt/reflexology%20treatment%20spa%20foot%20massage');
+                  background-image: url('assets/images/services/foot-massage-finishing-strokes.jpg');
                 "
               ></div>
               <div class="service-info">
-                <h3>足底反射疗法</h3>
+                <h3>Reflexology</h3>
                 <p>
-                  通过刺激足部特定反射区，调节身体机能，缓解疲劳并改善睡眠质量。
+                  Targeted foot work designed to ease fatigue, improve comfort,
+                  and help you feel balanced.
+                </p>
+              </div>
+            </div>
+            <div class="service-card" data-animate>
+              <div
+                class="service-img"
+                style="background-image: url('assets/images/services/tp.png')"
+              ></div>
+              <div class="service-info">
+                <h3>Trigger Point Therapy</h3>
+                <p>
+                  Specialized technique to relieve chronic pain by addressing
+                  specific muscle tightness.
+                </p>
+              </div>
+            </div>
+            <div class="service-card" data-animate>
+              <div
+                class="service-img"
+                style="background-image: url('assets/images/services/cp.png')"
+              ></div>
+              <div class="service-info">
+                <h3>Couple Massage</h3>
+                <p>
+                  Share a relaxing experience with a loved one in our private
+                  couple's suite.
                 </p>
               </div>
             </div>
@@ -113,13 +156,14 @@
           ></div>
           <div class="about-text" data-animate>
             <span class="subtitle">Welcome to Our Sanctuary</span>
-            <h2>经验丰富的理疗团队</h2>
+            <h2>Experienced, Caring Therapists</h2>
             <p>
-              Natural Care Spa
-              致力于为社区提供高质量的按摩服务。我们的环境干净、私密且充满禅意。
+              GS MED SPA is dedicated to providing high-quality massage and
+              wellness services in a clean, relaxing, and private environment.
             </p>
             <p>
-              每一位理疗师都经过严格培训，能够根据您的身体状况量身定制按摩方案。无论您是寻求运动损伤康复，还是单纯的减压放松，我们都能满足您的需求。
+              Every session is customized to your needs—whether you’re looking
+              for stress relief, muscle recovery, or full-body relaxation.
             </p>
           </div>
         </div>
@@ -128,29 +172,17 @@
       <section id="contact" class="section contact">
         <div class="container">
           <div class="contact-card" data-animate>
-            <h2>现在就开启您的放松之旅</h2>
+            <h2>Start Your Relaxation Today</h2>
             <p>
-              为了保证服务质量，我们建议您提前预约。您可以直接致电或发送短信。
+              To ensure the best experience, we recommend booking in advance.
+              Call or text us to schedule your appointment.
             </p>
 
-            <div class="contact-details">
-              <div class="detail-item">
-                <small>预约热线</small>
-                <a href="tel:+14347707235">(434) 770-7235</a>
-              </div>
-              <div class="detail-item">
-                <small>门店地址</small>
-                <span>Danville, VA 24541</span>
-              </div>
-              <div class="detail-item">
-                <small>营业时间</small>
-                <span>周一至周日: 9:00 AM - 9:00 PM</span>
-              </div>
-            </div>
+            <div class="contact-details"></div>
 
             <div class="contact-cta">
               <a href="tel:+14347707235" class="btn btn-primary"
-                >拨打电话预约</a
+                >Call to Book</a
               >
             </div>
           </div>
@@ -158,55 +190,52 @@
       </section>
     </main>
 
-    <!-- ✅ Footer：2列（Hours / Contact）+ 小icon社交 -->
     <footer class="site-footer" id="footer">
       <div class="container footer-surface">
         <div class="footer-grid-2">
-          <!-- Left: Hours -->
           <section class="footer-col">
             <h3 class="footer-title">Hours</h3>
             <div class="hours-list">
               <div class="hours-row">
                 <div class="day">Sunday</div>
-                <div class="time">9:00 AM – 9:00 PM</div>
+                <div class="time">9:00 AM – 6:00 PM</div>
               </div>
               <div class="hours-row">
                 <div class="day">Monday</div>
-                <div class="time">9:00 AM – 9:00 PM</div>
+                <div class="time">8:00 AM – 6:00 PM</div>
               </div>
               <div class="hours-row">
                 <div class="day">Tuesday</div>
-                <div class="time">9:00 AM – 9:00 PM</div>
+                <div class="time">8:00 AM – 6:00 PM</div>
               </div>
               <div class="hours-row">
                 <div class="day">Wednesday</div>
-                <div class="time">9:00 AM – 9:00 PM</div>
+                <div class="time">8:00 AM – 6:00 PM</div>
               </div>
               <div class="hours-row">
                 <div class="day">Thursday</div>
-                <div class="time">9:00 AM – 9:00 PM</div>
+                <div class="time">8:00 AM – 6:00 PM</div>
               </div>
               <div class="hours-row">
                 <div class="day">Friday</div>
-                <div class="time">9:00 AM – 9:00 PM</div>
+                <div class="time">8:00 AM – 6:00 PM</div>
               </div>
               <div class="hours-row">
                 <div class="day">Saturday</div>
-                <div class="time">9:00 AM – 9:00 PM</div>
+                <div class="time">8:00 AM – 6:00 PM</div>
               </div>
             </div>
           </section>
 
-          <!-- Right: Contact -->
           <section class="footer-col footer-contact">
             <h3 class="footer-title">Contact</h3>
 
             <div class="footer-map">
               <iframe
-                title="Natural Care Spa Map"
+                title="GS MED SPA Map"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps?q=Danville%20VA%2024541&output=embed"
+                src="https://www.google.com/maps?q=1400%20Gulf%20Shore%20Blvd%20N%20Suite%20154%20Naples%20FL%2034102&output=embed"
               ></iframe>
             </div>
 
@@ -215,35 +244,35 @@
 
               <a
                 class="footer-address"
-                href="https://www.google.com/maps?q=Danville%20VA%2024541"
+                href="https://www.google.com/maps?q=1400%20Gulf%20Shore%20Blvd%20N%20Suite%20154%20Naples%20FL%2034102"
                 target="_blank"
                 rel="noopener"
+                aria-label="View address on Google Maps"
               >
-                <span>Danville, VA 24541</span>
+                <span>1400 Gulf Shore Blvd N, Suite 154, Naples, FL 34102</span>
               </a>
 
               <a
                 class="footer-phone"
                 href="tel:+14347707235"
-                aria-label="Call us"
+                aria-label="Call us at (434) 770-7235"
               >
                 <span class="phone-ic">📞</span>
                 <span>(434) 770-7235</span>
               </a>
 
-              <!-- ✅ 小icon社交（把 href 换成你的真实链接） -->
-              <div class="footer-social" aria-label="Social links">
+              <div class="footer-social" aria-label="Social media links">
                 <a
                   class="social-ic"
                   href="#"
                   target="_blank"
                   rel="noopener"
-                  aria-label="Facebook"
+                  aria-label="Visit our Facebook page"
                 >
                   <svg
                     viewBox="0 0 24 24"
-                    width="18"
-                    height="18"
+                    width="20"
+                    height="20"
                     fill="none"
                     stroke="currentColor"
                     stroke-width="2"
@@ -259,12 +288,12 @@
                   href="#"
                   target="_blank"
                   rel="noopener"
-                  aria-label="Instagram"
+                  aria-label="Visit our Instagram page"
                 >
                   <svg
                     viewBox="0 0 24 24"
-                    width="18"
-                    height="18"
+                    width="20"
+                    height="20"
                     fill="none"
                     stroke="currentColor"
                     stroke-width="2"
@@ -280,12 +309,12 @@
                   href="#"
                   target="_blank"
                   rel="noopener"
-                  aria-label="Google Business Profile"
+                  aria-label="Visit our Google Business Profile"
                 >
                   <svg
                     viewBox="0 0 24 24"
-                    width="18"
-                    height="18"
+                    width="20"
+                    height="20"
                     fill="none"
                     stroke="currentColor"
                     stroke-width="2"
@@ -302,7 +331,7 @@
 
       <div class="footer-bottom">
         <div class="container">
-          <p>© <span id="year"></span> Natural Care Spa. 版权所有。</p>
+          <p>© <span id="year"></span> GS MED SPA. All rights reserved.</p>
         </div>
       </div>
     </footer>

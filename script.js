@@ -10,14 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const observer = new IntersectionObserver((entries) => {
-        const visibles = entries
-            .filter((e) => e.isIntersecting)
-            .map((e) => e.target);
-
-        visibles.forEach((el, idx) => {
-            el.style.transitionDelay = `${idx * 90}ms`;
-            el.classList.add("appear");
-            observer.unobserve(el);
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                // 获取该元素在其父元素中的索引，用于计算延迟
+                const index = Array.from(el.parentNode.children).indexOf(el);
+                el.style.transitionDelay = `${index * 100}ms`; // 稍微增加延迟时间
+                el.classList.add("appear");
+                observer.unobserve(el);
+            }
         });
     }, observerOptions);
 
@@ -29,19 +30,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.querySelector(".navbar");
     const onScroll = () => {
         if (!navbar) return;
-        navbar.classList.toggle("is-scrolled", window.scrollY > 50);
+        navbar.classList.toggle("is-scrolled", window.scrollY > 30); // 稍微减小触发滚动的距离
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
 
     // 4. Hero 背景轻微视差（可选）
     const heroBg = document.querySelector("[data-parallax]");
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
 
     if (heroBg && !reduceMotion) {
         const parallax = () => {
             const y = window.scrollY || 0;
-            heroBg.style.transform = `translate3d(0, ${y * 0.08}px, 0)`;
+            // 使用 translate3d 并只在 Y 轴上移动，性能更好
+            heroBg.style.transform = `translate3d(0, ${y * 0.1}px, 0)`; // 稍微增加视差效果
         };
         window.addEventListener("scroll", parallax, { passive: true });
         parallax();
