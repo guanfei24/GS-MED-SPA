@@ -4,11 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GS MED SPA | Facial and therapy in Naples, FL</title>
+    <meta
+      name="description"
+      content="GS MED SPA in Naples, FL offers premium facials, skin therapy, and wellness treatments. Book your appointment today for 20% OFF your first visit!"
+    />
+    <link rel="canonical" href="https://www.gsmedspanaples.com/" />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MassageBusiness",
+        "name": "GS MED SPA",
+        "image": "https://www.gsmedspanaples.com/assets/images/logo.png",
+        "description": "Professional Massage Therapy & Skincare in Naples, FL. Expert Deep Tissue, Swedish, and Therapeutic massages.",
+        "url": "https://www.gsmedspanaples.com/",
+        "telephone": "+12398519999",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1400 Gulf Shore Blvd N, Suite 154",
+          "addressLocality": "Naples",
+          "addressRegion": "FL",
+          "postalCode": "34102",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "26.15814",
+          "longitude": "-81.80663"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "08:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ],
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": "26.15814",
+            "longitude": "-81.80663"
+          },
+          "geoRadius": "20000"
+        }
+      }
+    </script>
   </head>
   <body>
     <div class="top-promo-bar urgent">
@@ -25,8 +85,16 @@
     </div>
     <header class="navbar">
       <nav class="container nav-content">
-        <a href="#" class="logo">
-          <img src="assets/images/logo.png" alt="GS MED SPA Logo" />
+        <a href="/" class="logo" title="GS MED SPA Home">
+          <img
+            src="assets/images/logo.png"
+            alt="GS MED SPA | Medical Spa & Skin Care Treatments in Naples, FL"
+            width="180"
+            height="60"
+            itemprop="logo"
+            fetchpriority="high"
+            loading="eager"
+          />
         </a>
 
         <ul class="nav-links">
@@ -43,18 +111,25 @@
     <main>
       <section class="hero hero-step1-right">
         <div class="hero-inner">
-          <div
-            class="hero-image"
-            data-parallax
-            style="background-image: url('assets/images/image.jpg')"
-          ></div>
+          <div class="hero-image" data-parallax>
+            <img
+              src="assets/images/best-massage-therapy-naples-fl.jpg"
+              alt="Professional Massage Therapy in Naples FL - Relaxing Treatment at GS MED SPA"
+              fetchpriority="high"
+              loading="eager"
+              decoding="sync"
+            />
+          </div>
 
           <div class="hero-content container">
             <div class="hero-text-box" data-animate>
-              <h1>Professional Facial and therapy</h1>
+              <h1>Professional Massage Therapy & Skincare in Naples, FL</h1>
               <p>
-                Experience ultimate relaxation and rejuvenation with our expert
-                massage therapies tailored to your needs.
+                Experience Naples' premier destination for
+                <strong>Deep Tissue, Swedish, and Therapeutic massages</strong>
+                integrated with <strong>advanced skincare treatments</strong>.
+                Our expert therapists tailor every session to ensure ultimate
+                relaxation, effective pain relief, and radiant skin.
               </p>
               <div class="hero-actions">
                 <a href="tel:+12398519999" class="btn btn-primary"
@@ -120,10 +195,16 @@
           </h2>
           <div class="services-grid">
             <div class="service-card" data-animate>
-              <div
-                class="service-img"
-                style="background-image: url('assets/images/services/dt.png')"
-              ></div>
+              <div class="service-img">
+                <img
+                  src="assets/images/services/Deep-Tissue-naples.png"
+                  alt="Deep Tissue Massage - GS MED SPA Naples Florida"
+                  loading="lazy"
+                  width="600"
+                  height="400"
+                  decoding="async"
+                />
+              </div>
               <div class="service-info">
                 <h3>Deep Tissue</h3>
                 <p>
@@ -134,10 +215,16 @@
             </div>
 
             <div class="service-card" data-animate>
-              <div
-                class="service-img"
-                style="background-image: url('assets/images/services/sm.png')"
-              ></div>
+              <div class="service-img">
+                <img
+                  src="assets/images/services/swedish-massage-naples.png"
+                  alt="Swedish Massage Therapy - GS MED SPA Naples Florida"
+                  loading="lazy"
+                  width="600"
+                  height="400"
+                  decoding="async"
+                />
+              </div>
               <div class="service-info">
                 <h3>Swedish Massage</h3>
                 <p>
@@ -148,12 +235,16 @@
             </div>
 
             <div class="service-card" data-animate>
-              <div
-                class="service-img"
-                style="
-                  background-image: url('assets/images/services/thai-massage.jpg');
-                "
-              ></div>
+              <div class="service-img">
+                <img
+                  src="assets/images/services/thai-massage-naples.jpg"
+                  alt="Thai Stretching - GS MED SPA Naples Florida"
+                  loading="lazy"
+                  width="600"
+                  height="400"
+                  decoding="async"
+                />
+              </div>
               <div class="service-info">
                 <h3>Thai Stretching</h3>
                 <p>
@@ -163,12 +254,16 @@
               </div>
             </div>
             <div class="service-card" data-animate>
-              <div
-                class="service-img"
-                style="
-                  background-image: url('assets/images/services/foot-massage-finishing-strokes.jpg');
-                "
-              ></div>
+              <div class="service-img">
+                <img
+                  src="assets/images/services/Reflexology-naples.jpg"
+                  alt="Reflexology - GS MED SPA Naples Florida"
+                  loading="lazy"
+                  width="600"
+                  height="400"
+                  decoding="async"
+                />
+              </div>
               <div class="service-info">
                 <h3>Reflexology</h3>
                 <p>
@@ -178,10 +273,16 @@
               </div>
             </div>
             <div class="service-card" data-animate>
-              <div
-                class="service-img"
-                style="background-image: url('assets/images/services/tp.png')"
-              ></div>
+              <div class="service-img">
+                <img
+                  src="assets/images/services/Trigger-Point-Therapy-naples.png"
+                  alt="Trigger Point Therapy - GS MED SPA Naples Florida"
+                  loading="lazy"
+                  width="600"
+                  height="400"
+                  decoding="async"
+                />
+              </div>
               <div class="service-info">
                 <h3>Trigger Point Therapy</h3>
                 <p>
@@ -191,10 +292,16 @@
               </div>
             </div>
             <div class="service-card" data-animate>
-              <div
-                class="service-img"
-                style="background-image: url('assets/images/services/cp.png')"
-              ></div>
+              <div class="service-img">
+                <img
+                  src="assets/images/services/Couple-Massage-naples.png"
+                  alt="Couple Massage - GS MED SPA Naples Florida"
+                  loading="lazy"
+                  width="600"
+                  height="400"
+                  decoding="async"
+                />
+              </div>
               <div class="service-info">
                 <h3>Couple Massage</h3>
                 <p>
@@ -314,7 +421,7 @@
                 rel="noopener"
                 aria-label="View address on Google Maps"
               >
-                <span>1400 Gulf Shore Blvd N, Suite 154, Naples, FL 34102</span>
+                <p>1400 Gulf Shore Blvd N, Suite 154<br />Naples, FL 34102</p>
               </a>
 
               <a

@@ -145,16 +145,37 @@ body {
 }
 
 /* 背景图片层 */
+/* Hero 容器优化 */
 .hero-image {
-  position: absolute;
-  top: -5%; /* 稍微高一点，为视差滚动留出余量 */
-  left: 0;
+  position: relative;
   width: 100%;
-  height: 110%; /* 稍微高一点，防止滚动时露白 */
-  background-size: cover;
-  background-position: center;
-  z-index: -1; /* 确保在文字内容下方 */
+  height: 100%; /* 确保容器填满父级 */
+  overflow: hidden; /* 必须隐藏溢出部分，防止视差移动时图片露出边框 */
+  background-color: var(--bg-soft); /* 图片加载前的占位色 */
+}
+
+/* 核心修复：<img> 标签样式 */
+.hero-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 115%; /* 稍微加高一点，为视差滚动预留上下移动的空间 */
+  object-fit: cover; /* 关键：模拟 background-size: cover */
+  object-position: center; /* 确保图片中心对齐 */
+  
+  /* 初始定位：居中 */
+  transform: translate(-50%, -50%); 
+  
+  /* 性能优化：开启硬件加速 */
   will-change: transform;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .hero-image img {
+    height: 110%; /* 手机端视差幅度小，高度可以稍微降低 */
+  }
 }
 
 /* 图片上的半透明遮罩：关键！防止图片太花导致看不清字 */
@@ -274,11 +295,16 @@ body {
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
 }
 .service-img {
-  height: 240px; /* 稍微增加图片高度 */
-  background-size: cover;
-  background-position: center;
-  transform: scale(1);
-  transition: transform 0.6s var(--ease-out-quint);
+    aspect-ratio: 3 / 2; /* 建议设定一个固定比例，让页面整齐 */
+    overflow: hidden;
+    background: var(--bg-soft); /* 图片加载前的底色 */
+}
+
+.service-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 模拟 background-size: cover 的效果 */
+    display: block;
 }
 .service-card:hover .service-img {
   transform: scale(1.04);

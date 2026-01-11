@@ -12,6 +12,52 @@
     />
 
     <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MassageBusiness",
+        "name": "GS MED SPA",
+        "image": "https://www.gsmedspanaples.com/assets/images/logo.png",
+        "description": "Premium Massage Therapy and Advanced Skincare in Naples, FL.",
+        "url": "https://www.gsmedspanaples.com/services.html",
+        "telephone": "+12398519999",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1400 Gulf Shore Blvd N, Suite 154",
+          "addressLocality": "Naples",
+          "addressRegion": "FL",
+          "postalCode": "34102",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "26.15814",
+          "longitude": "-81.80663"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "08:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ]
+      }
+    </script>
   </head>
 
   <body class="services-page">
@@ -27,14 +73,16 @@
       </div>
       <div class="shimmer-effect"></div>
     </div>
-    <!-- =========================
-         HEADER
-         用你原来的 header（推荐保持一致）
-         ========================= -->
     <header class="navbar">
       <nav class="container nav-content">
         <a href="#" class="logo">
-          <img src="assets/images/logo.png" alt="GS MED SPA Logo" />
+          <img
+            src="assets/images/logo.png"
+            alt="GS MED SPA | Massage & Skincare Naples FL"
+            width="180"
+            height="60"
+            fetchpriority="high"
+          />
         </a>
 
         <ul class="nav-links">
@@ -229,10 +277,6 @@
       </div>
     </main>
 
-    <!-- =========================
-         FOOTER
-         用你原来的 footer（推荐保持一致）
-         ========================= -->
     <footer class="site-footer" id="footer">
       <div class="container footer-surface">
         <div class="footer-grid-2">
@@ -292,7 +336,7 @@
                 rel="noopener"
                 aria-label="View address on Google Maps"
               >
-                <span>1400 Gulf Shore Blvd N, Suite 154, Naples, FL 34102</span>
+                <p>1400 Gulf Shore Blvd N, Suite 154<br />Naples, FL 34102</p>
               </a>
 
               <a
