@@ -62,6 +62,52 @@ document.addEventListener("DOMContentLoaded", () => {
         }, { passive: true });
     }
 
+
+    // 6. About 横向展示滑动（不跟随页面下拉）
+    const reduceMotion3 = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const slider = document.querySelector(".about-slider");
+    if (slider) {
+        const track = slider.querySelector(".about-slider-track");
+        const slides = slider.querySelectorAll(".about-slide");
+        const dotsWrap = slider.querySelector(".about-dots");
+        const prevBtn = slider.querySelector(".about-prev");
+        const nextBtn = slider.querySelector(".about-next");
+
+        let index = 0;
+        const max = slides.length - 1;
+
+        /* ===== 自动生成 dots ===== */
+        dotsWrap.innerHTML = "";
+        const dots = [];
+
+        slides.forEach((_, i) => {
+            const dot = document.createElement("button");
+            dot.className = "about-dot";
+            dot.addEventListener("click", () => goTo(i));
+            dotsWrap.appendChild(dot);
+            dots.push(dot);
+        });
+
+        function updateDots() {
+            dots.forEach((d, i) => {
+                d.classList.toggle("is-active", i === index);
+            });
+        }
+
+        function goTo(i) {
+            index = Math.max(0, Math.min(max, i));
+            track.style.transform = `translateX(-${index * 100}%)`;
+            updateDots();
+        }
+
+        prevBtn && prevBtn.addEventListener("click", () => goTo(index - 1));
+        nextBtn && nextBtn.addEventListener("click", () => goTo(index + 1));
+
+        /* 初始化 */
+        goTo(0);
+    }
+
+
     // 5. 平滑滚动增强 (可选)
     // 确保点击导航链接时能考虑到置顶公告条的高度
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

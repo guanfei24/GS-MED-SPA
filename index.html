@@ -341,10 +341,79 @@
       <section id="about" class="section about">
         <div class="container about-flex">
           <div
-            class="about-image"
+            class="about-image about-slider"
             data-animate
-            style="background-image: url('assets/images/front.png')"
-          ></div>
+            aria-label="About gallery"
+          >
+            <div class="about-slider-viewport" tabindex="0">
+              <div class="about-slider-track">
+                <div
+                  class="about-slide"
+                  style="background-image: url('assets/images/front.png')"
+                  role="group"
+                  aria-label="Slide 1"
+                ></div>
+                <div
+                  class="about-slide"
+                  style="background-image: url('assets/images/front_door.png')"
+                  role="group"
+                  aria-label="Slide 2"
+                ></div>
+                <div
+                  class="about-slide"
+                  style="background-image: url('assets/images/front_desk.png')"
+                  role="group"
+                  aria-label="Slide 3"
+                ></div>
+                <div
+                  class="about-slide"
+                  style="background-image: url('assets/images/hallway.png')"
+                  role="group"
+                  aria-label="Slide 4"
+                ></div>
+                <div
+                  class="about-slide"
+                  style="background-image: url('assets/images/room_couple.png')"
+                  role="group"
+                  aria-label="Slide 5"
+                ></div>
+              </div>
+            </div>
+
+            <button
+              class="about-nav about-prev"
+              type="button"
+              aria-label="Previous image"
+            >
+              ‹
+            </button>
+            <button
+              class="about-nav about-next"
+              type="button"
+              aria-label="Next image"
+            >
+              ›
+            </button>
+
+            <div class="about-dots" aria-label="Gallery pagination">
+              <button
+                class="about-dot"
+                type="button"
+                aria-label="Go to slide 1"
+              ></button>
+              <button
+                class="about-dot"
+                type="button"
+                aria-label="Go to slide 2"
+              ></button>
+              <button
+                class="about-dot"
+                type="button"
+                aria-label="Go to slide 3"
+              ></button>
+            </div>
+          </div>
+
           <div class="about-text" data-animate>
             <span class="subtitle">Welcome to Our Sanctuary</span>
             <h2>Experienced, Caring Therapists</h2>
@@ -393,27 +462,27 @@
               </div>
               <div class="hours-row">
                 <div class="day">Monday</div>
-                <div class="time">8:00 AM – 8:00 PM</div>
+                <div class="time">9:00 AM – 7:30 PM</div>
               </div>
               <div class="hours-row">
                 <div class="day">Tuesday</div>
-                <div class="time">8:00 AM – 8:00 PM</div>
+                <div class="time">9:00 AM – 7:30 PM</div>
               </div>
               <div class="hours-row">
                 <div class="day">Wednesday</div>
-                <div class="time">8:00 AM – 8:00 PM</div>
+                <div class="time">9:00 AM – 7:30 PM</div>
               </div>
               <div class="hours-row">
                 <div class="day">Thursday</div>
-                <div class="time">8:00 AM – 8:00 PM</div>
+                <div class="time">9:00 AM – 7:30 PM</div>
               </div>
               <div class="hours-row">
                 <div class="day">Friday</div>
-                <div class="time">8:00 AM – 8:00 PM</div>
+                <div class="time">9:00 AM – 7:30 PM</div>
               </div>
               <div class="hours-row">
                 <div class="day">Saturday</div>
-                <div class="time">8:00 AM – 8:00 PM</div>
+                <div class="time">9:00 AM – 7:30 PM</div>
               </div>
             </div>
           </section>
